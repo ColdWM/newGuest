@@ -25,7 +25,7 @@ public class GuestDaoTest extends GuestTestTemplate {
 		guest.setGuestId(1);
 		
 		//When
-		guest = guestDao.getBoard(guest);
+		guest = guestDao.getGuest(guest);
 		
 		//Then
 		assertNotNull(guest);

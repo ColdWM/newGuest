@@ -1,5 +1,7 @@
 package com.nhnent.guest2.service;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import com.nhnent.guest2.dao.GuestDao;
@@ -10,9 +12,10 @@ public class GuestService {
 	private GuestDao guestDao;
 	
 	public GuestVo getGuest(GuestVo guest) {
-		GuestVo result = new GuestVo();
-		result = guestDao.getBoard(guest);
-		System.out.println(result.toString());
-		return result;
+		return guestDao.getGuest(guest);
+	}
+	
+	public List<GuestVo> getGuests() {
+		return guestDao.getGuests();
 	}
 }

@@ -20,4 +20,27 @@
  		WHERE
  			guest_id = #{guestId}
  	</select>
+ 	<select id="getGuests" resultMap="guestMap">
+ 		SELECT
+ 			guest_id,
+ 			guest_name,
+ 			guest_password,
+ 			guest_text
+ 		FROM
+ 			guest
+ 	</select>
+ 	<insert id="insertGuest" parameterType="com.nhnent.guest2.vo.GuestVo">
+ 		INSERT INTO guest
+ 			(
+	 			guest_name,
+	 			guest_password,
+	 			guest_text
+ 			)
+ 		VALUES
+ 			(
+ 				#{guestName},
+ 				#{guestPassword},
+ 				#{guestText}
+ 			)
+ 	</insert>
  </mapper>
