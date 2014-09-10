@@ -12,8 +12,49 @@
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<org.mybatis.version>3.1.1</org.mybatis.version>
+    	<org.mybatis.spring.version>1.1.1</org.mybatis.spring.version>
 	</properties>
+	<repositories>
+		<repository>  
+			<id>CUBRID</id>
+			<name>CUBRID-releases</name>
+			<url>http://maven.cubrid.org</url>
+		</repository>
+	</repositories>
 	<dependencies>
+	    <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+	 
+	    <dependency>
+	        <groupId>org.mybatis</groupId>
+	        <artifactId>mybatis</artifactId>
+	        <version>${org.mybatis.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.mybatis</groupId>
+	        <artifactId>mybatis-spring</artifactId>
+	        <version>${org.mybatis.spring.version}</version>
+	    </dependency>
+	    <dependency>
+			<groupId>cubrid</groupId>
+			<artifactId>cubrid-jdbc</artifactId>
+			<version>9.3.0.0206</version>
+		</dependency>
+		<!-- Validate -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.2.0.Final</version>
+		</dependency>
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>

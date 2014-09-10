@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+ 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="GuestMapper">
+ 	<resultMap id="guestMap" type="com.nhnent.guest2.vo.GuestVo">
+ 		<result property="guestId" column="guest_id"/>
+ 		<result property="guestName" column="guest_name"/>
+ 		<result property="guestPassword" column="guest_password"/>
+ 		<result property="guestText" column="guest_text"/>
+ 	</resultMap>
+ 	<select id="getGuest" parameterType="com.nhnent.guest2.vo.GuestVo" resultMap="guestMap">
+ 		SELECT
+ 			guest_id,
+ 			guest_name,
+ 			guest_password,
+ 			guest_text
+ 		FROM
+ 			guest
+ 		WHERE
+ 			guest_id = #{guestId}
+ 	</select>
+ </mapper>
