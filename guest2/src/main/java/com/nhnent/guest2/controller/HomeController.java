@@ -1,4 +1,4 @@
-package com.nhnent.guest2;
+package com.nhnent.guest2.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
