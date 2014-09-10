@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 
 public class GuestVo {
 	@NotNull
-	private String guestId;
+	private Integer guestId;
 	@NotNull
 	private String guestName;
 	@NotNull
@@ -17,10 +17,10 @@ public class GuestVo {
 				+ ", guestPassword=" + guestPassword + ", guestText="
 				+ guestText + "]";
 	}
-	public String getGuestId() {
+	public Integer getGuestId() {
 		return guestId;
 	}
-	public void setGuestId(String guestId) {
+	public void setGuestId(Integer guestId) {
 		this.guestId = guestId;
 	}
 	public String getGuestName() {
