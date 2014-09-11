@@ -43,4 +43,17 @@
  				#{guestText}
  			)
  	</insert>
+ 	<update id="updateGuest" parameterType="com.nhnent.guest2.vo.GuestVo">
+ 		UPDATE guest
+ 		SET
+	 		guest_text = #{guestText}
+	 	WHERE
+	 		guest_id = #{guestId}
+ 	</update>
+ 	<delete id="deleteGuest" parameterType="int">
+ 		DELETE FROM
+ 			guest
+ 		WHERE
+ 			guest_id = #{guestId}
+ 	</delete>
  </mapper>

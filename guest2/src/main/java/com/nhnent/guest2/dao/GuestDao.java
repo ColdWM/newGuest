@@ -3,6 +3,7 @@ package com.nhnent.guest2.dao;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
 
 import com.nhnent.guest2.vo.GuestVo;
 
